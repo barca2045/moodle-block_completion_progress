@@ -37,7 +37,7 @@ class ws_progress_external extends external_api {
 
             if ($blockinstances) {
                 $blockinstance = array_shift($blockinstances);
-                $blockinstance_config = unserialize(base64_decode($blockinstance->configdata), [stdClass::class]);
+                $blockinstance_config = unserialize(base64_decode($blockinstance->configdata), ['stdClass']);
                 if (empty($blockinstance_config)) {
                     $blockinstance_config = null;
                 }
